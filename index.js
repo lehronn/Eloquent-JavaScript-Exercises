@@ -1,51 +1,35 @@
-//christmas tree
-function tree() {
-  let hash = "#";
-  let level = prompt("Please enter here, how long may be Your tree? \n Minimum is 1.");
+//chapter 3
+//min
+function min() {
+  let x = parseInt(prompt("Enter first number."));
+  let y = parseInt(prompt("Enter secound number."));
+  let avg = (x+y)/2;
 
-  if (level >= 1 || typeof level === 'number') {
-    for (i = 0; i < level; i++) {
-      console.log(hash);
-      for (j = 0; j < 1; j++) {
-        hash += "#";
-      };
-    };
-  }
-  else {
-    console.log("The tree must have at least 1 level and the number of level should be integer type.");
-  };
+  if (x==y) {console.log("both number is equal.")};
+  if (x>y) {console.log(x + " is greater.")};
+  if (x<y) {console.log(y + " is greater.")};
+  console.log("average " + x + " and " + y + " is " + avg);
 };
 
-//fizzBuzz
-function fizzBuzz() {
-  const fizz = "fizz";
-  const buzz = "buzz";
-  counter = 1;
+//isEven
+function isEven(x) {
 
-  for (i = 0; i < 100; i++) {
-    if (counter % 3 == 0 && counter % 5 == 0) {console.log(fizz,buzz);}
-    else if (counter % 3 == 0) {console.log(fizz)}
-    else if (counter % 5 == 0) {console.log(buzz)}
-    else {console.log(counter)}
-    counter++;
-  }
-};
-
-//chessBoard
-function chessBoard() {
-  let board = "";
-  let size = prompt( "How big cheesBoard should be?" );
-
-  for ( i=0; i < size; i++ ) {
-    for ( j=0; j < size; j++ ) {
-      if ( ( i+j ) % 2 == 0 ) { board += "0"; }
-      else { board += "X" }
-    };
-    board += "\n";
-  };
-  console.log( board );
+  if (x==0) {return true && console.log("number is even.")}
+  else if (x==1) {return false && console.log("number is not even.")}
+  else {return isEven(x-2);};
 }
 
-tree();
-fizzBuzz();
-chessBoard();
+//counters
+function countBS() {
+
+}
+
+function countChar() {
+
+}
+
+
+// min();
+// isEven(parseInt(prompt("Enter number.")));
+countBS();
+countChar();
